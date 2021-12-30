@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ODOT</title>
+    <style>
+        div{
+            border: 1px solid black;
+            box-sizing: border-box;
+        }
+        .grid-container {
+            display: grid;
+        }
+        .grid-item1 {
+            width:98vw;
+            height: 32vh;
+        }
+        .grid-item2{
+            width:25%;
+            height:100%;
+            float:left;
+        }
+        img{
+            width:100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- <img style="width:192px" src="https://itscameras.dot.state.oh.us/images/CLE/CLE044.jpg"> -->
+    <div id="parent">
+        <div class="grid-container">
+            <div class="grid-item1">
+                <div class="grid-item2">
+                    <img src="https://itscameras.dot.state.oh.us/images/CLE/CLE044.jpg">
+                </div>
+                <div class="grid-item2">
+                    <img src="https://itscameras.dot.state.oh.us/images/CLE/CLE3097.jpg">
+                </div>
+                <div class="grid-item2">
+                    <img src="https://itscameras.dot.state.oh.us/images/CLE/CCTV3103.jpg">
+                </div>
+                <div class="grid-item2">
+                    <img src="https://itscameras.dot.state.oh.us/images/CLE/SR-44_Capital_Pkwy.jpg">
+                </div>
+            </div>
+            <div class="grid-item1">
+                <div class="grid-item2">
+                    <img src="https://itscameras.dot.state.oh.us/images/CLE/CLE044.jpg">
+
+                </div>
+                <!-- <div class="grid-item2">
+                    <img src="https://itscameras.dot.state.oh.us/images/CLE/CLE044.jpg">
+
+                </div>
+                <div class="grid-item2">
+                    <img src="https://itscameras.dot.state.oh.us/images/CLE/CLE044.jpg">
+
+                </div> -->
+                <div class="grid-item2" style="float:right;">
+                    <img src="https://itscameras.dot.state.oh.us/images/CLE/CLE044.jpg">
+
+                </div>
+            </div>
+            <div class="grid-item1">
+                <div class="grid-item2">
+                    <img src="https://itscameras.dot.state.oh.us/images/CLE/CLE044.jpg">
+
+                </div>
+                <div class="grid-item2">
+                    <img src="https://itscameras.dot.state.oh.us/images/CLE/CLE044.jpg">
+
+                </div>
+                <div class="grid-item2">
+                    <img src="https://itscameras.dot.state.oh.us/images/CLE/CLE044.jpg">
+
+                </div>
+                <div class="grid-item2">
+                    <img src="https://itscameras.dot.state.oh.us/images/CLE/CLE044.jpg">
+
+                </div>
+            </div>
+          </div>
+    </div>
+    <script>
+        let urls = 
+        [
+            {url:"https://itscameras.dot.state.oh.us/images/CLE/CLE044.jpg"},
+            {url:"https://itscameras.dot.state.oh.us/images/CLE/CLE3097.jpg"},
+            {url:"https://itscameras.dot.state.oh.us/images/CLE/CCTV3103.jpg"},
+            {url:"https://itscameras.dot.state.oh.us/images/CLE/SR-44_Capital_Pkwy.jpg"},
+            {url:"https://itscameras.dot.state.oh.us/images/CLE/I-90_at_Hermitage_Rd.jpg"},
+            {url:"https://itscameras.dot.state.oh.us/images/CLE/CLE158-L.jpg"},
+            {url:"https://itscameras.dot.state.oh.us/images/CLE/CLE207-L.jpg"},
+            {url:"https://itscameras.dot.state.oh.us/images/CLE/CLE156-L.jpg"},
+            {url:"https://itscameras.dot.state.oh.us/images/CLE/CLE160.jpg"},
+            {url:"https://itscameras.dot.state.oh.us/images/CLE/I-90_at_Riverside_Dr.jpg"}
+        ];
+        setInterval(()=>{    
+            
+            let elements = document.getElementsByTagName("img");
+
+            for(let i=0; i<elements.length; i++){
+                elements[i].src = urls[i].url+"?data="+Date.now();
+            }
+        },5000);
+        
+    </script>
+</body>
+</html>
